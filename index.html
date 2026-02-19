@@ -1,11 +1,113 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>민경욱 | Resume</title>
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Pretendard', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #e2e8f0;
+      overflow-x: hidden;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #38bdf8;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+
+    .section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      transform: translateY(40px);
+      opacity: 0;
+      transition: all 0.8s ease;
+    }
+
+    .card.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    h2 {
+      color: #38bdf8;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #38bdf8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      opacity: 0.6;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      .card {
+        padding: 25px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
@@ -13,37 +115,56 @@
   <p>Application SW Engineer | C++ | Qt | AI Systems</p>
 </header>
 
-<section class="card">
-  <h2>About</h2>
-  <p>
-    9년 이상 의료기기 소프트웨어 개발 경험.
-    C++/Qt 기반 UI부터 멀티스레딩, DB, 통신 구조 설계까지 수행.
-    최근 LLM/RAG 기반 AI 시스템 및 DevOps 자동화 구축.
-  </p>
-</section>
+<section class="section">
+  <div class="card">
+    <h2>About</h2>
+    <p>
+      9년 이상 의료기기 응용소프트웨어 개발 경험.
+      C++/Qt 기반 UI, 멀티스레딩, DB, 통신 구조 설계 수행.
+      최근 LLM/RAG 기반 AI 시스템 및 DevOps 자동화 구축.
+    </p>
+  </div>
 
-<section class="card">
-  <h2>Key Achievements</h2>
-  <ul>
-    <li>23,000건 문서 기반 RAG 챗봇 구축 (검색 정확도 94%)</li>
-    <li>GitLab Webhook 기반 AI 코드 리뷰 자동화</li>
-    <li>우선순위 Thread Pool 설계 및 적용</li>
-    <li>CouchDB + Syncthing 데이터 공유 시스템 설계</li>
-  </ul>
-</section>
+  <div class="card">
+    <h2>Key Achievements</h2>
+    <ul>
+      <li>23,000건 문서 기반 RAG 챗봇 구축 (검색 정확도 94%)</li>
+      <li>Vision OCR 자동화로 스캔 PDF까지 검색 확장</li>
+      <li>GitLab Webhook 기반 AI 코드 리뷰 자동화</li>
+      <li>우선순위 Thread Pool 설계 및 적용</li>
+      <li>CouchDB + Syncthing 데이터 공유 시스템 구축</li>
+    </ul>
+  </div>
 
-<section class="card">
-  <h2>Experience</h2>
-  <h3>XCath (2025~)</h3>
-  <p>AI 시스템 구축 및 DevOps 환경 설계</p>
-
-  <h3>RAY (2016~2025)</h3>
-  <p>3D 의료기기 소프트웨어 개발 및 시스템 설계</p>
+  <div class="card">
+    <h2>Experience</h2>
+    <h3>XCath (2025~)</h3>
+    <p>AI 시스템 구축 및 DevOps 환경 설계</p>
+    <br/>
+    <h3>RAY (2016~2025)</h3>
+    <p>의료기기 3D 소프트웨어 UI 및 시스템 아키텍처 설계</p>
+  </div>
 </section>
 
 <footer>
-  <p>© 2025 민경욱</p>
+  © 2026 민경욱
 </footer>
+
+<script>
+  const cards = document.querySelectorAll('.card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  cards.forEach(card => {
+    observer.observe(card);
+  });
+</script>
 
 </body>
 </html>
