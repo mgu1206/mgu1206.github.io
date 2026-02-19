@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #111;
+  color: #eee;
+}
+
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: #1e1e1e;
+}
+
+.card {
+  margin: 20px;
+  padding: 20px;
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+
+h1, h2 {
+  color: #00d9ff;
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 70%;
+    margin: 20px auto;
+  }
+}
