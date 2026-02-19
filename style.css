@@ -1,30 +1,96 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #111;
-  color: #eee;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --navy-1: #0f172a;
+  --navy-2: #1e293b;
+  --blue: #38bdf8;
+  --white: #e2e8f0;
 }
 
-header {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--navy-1);
+  color: var(--white);
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 20px 40px;
+  background: rgba(15,23,42,0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.navbar .nav-links a {
+  color: var(--white);
+  margin-left: 24px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.navbar .nav-links a:hover {
+  color: var(--blue);
+}
+
+#hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, var(--navy-1), var(--navy-2));
   text-align: center;
-  padding: 60px 20px;
-  background: #1e1e1e;
+  animation: fadeIn 1.2s ease-out;
+}
+#hero h1 { font-size: 3rem; color: var(--blue); }
+#hero p { font-size: 1.2rem; opacity: 0.8; }
+
+.section {
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 32px;
+  color: var(--blue);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
 }
 
 .card {
-  margin: 20px;
-  padding: 20px;
-  background: #1a1a1a;
-  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  padding: 24px;
+  width: 200px;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
 }
 
-h1, h2 {
-  color: #00d9ff;
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
 
-@media (min-width: 768px) {
-  .card {
-    width: 70%;
-    margin: 20px auto;
-  }
+@media (max-width: 768px) {
+  .cards { flex-direction: column; }
 }
