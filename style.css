@@ -429,17 +429,27 @@ ul {
 }
 
 /* Tech Stack */
+.tech-stack-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
 .tech-stack {
   text-align: center;
 }
 
 .tech-stack-title {
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+}
+
+.tech-stack-title--learning {
+  color: #f59e0b;
 }
 
 .tech-tags {
@@ -464,6 +474,18 @@ ul {
   color: var(--text-primary);
   border-color: var(--border-hover);
   background: var(--bg-card-hover);
+}
+
+.tech-tag--learning {
+  color: #f59e0b;
+  border-color: rgba(245, 158, 11, 0.25);
+  background: rgba(245, 158, 11, 0.06);
+}
+
+.tech-tag--learning:hover {
+  color: #fbbf24;
+  border-color: rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.12);
 }
 
 /* ========== Company Sections ========== */
@@ -963,6 +985,11 @@ ul {
 
   .expertise-grid {
     grid-template-columns: 1fr;
+  }
+
+  .tech-stack-group {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .project-details {
