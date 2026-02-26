@@ -17,6 +17,30 @@
   --radius: 12px;
   --radius-sm: 8px;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --navbar-bg: rgba(10, 15, 28, 0.8);
+  --navbar-bg-scrolled: rgba(10, 15, 28, 0.95);
+  --mobile-nav-bg: rgba(10, 15, 28, 0.98);
+  --lightbox-bg: rgba(0, 0, 0, 0.9);
+}
+
+/* Light Theme */
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-card: rgba(0, 0, 0, 0.03);
+  --bg-card-hover: rgba(0, 0, 0, 0.06);
+  --accent: #2563eb;
+  --accent-light: #3b82f6;
+  --accent-glow: rgba(37, 99, 235, 0.1);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --border: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(0, 0, 0, 0.15);
+  --navbar-bg: rgba(248, 250, 252, 0.85);
+  --navbar-bg-scrolled: rgba(248, 250, 252, 0.95);
+  --mobile-nav-bg: rgba(248, 250, 252, 0.98);
+  --lightbox-bg: rgba(0, 0, 0, 0.8);
 }
 
 /* ========== Reset ========== */
@@ -63,14 +87,14 @@ ul {
   width: 100%;
   z-index: 100;
   padding: 0;
-  background: rgba(10, 15, 28, 0.8);
+  background: var(--navbar-bg);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
   transition: var(--transition);
 }
 
 .navbar.scrolled {
-  background: rgba(10, 15, 28, 0.95);
+  background: var(--navbar-bg-scrolled);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -82,6 +106,13 @@ ul {
   justify-content: space-between;
   align-items: center;
   height: 64px;
+  gap: 16px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .nav-logo {
@@ -647,7 +678,7 @@ ul {
   position: fixed;
   inset: 0;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.9);
+  background: var(--lightbox-bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -904,6 +935,106 @@ ul {
   color: var(--text-muted);
 }
 
+/* ========== Theme Toggle ========== */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 6px 8px;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+  background: var(--bg-card);
+}
+
+.theme-toggle .icon-sun,
+.theme-toggle .icon-moon {
+  display: none;
+}
+
+/* Dark mode (default): show sun icon */
+.theme-toggle .icon-sun {
+  display: inline;
+}
+
+.theme-toggle .icon-moon {
+  display: none;
+}
+
+/* Light mode: show moon icon */
+[data-theme="light"] .theme-toggle .icon-sun {
+  display: none;
+}
+
+[data-theme="light"] .theme-toggle .icon-moon {
+  display: inline;
+}
+
+/* Light theme specific overrides */
+[data-theme="light"] .navbar.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .hero-title {
+  background: linear-gradient(135deg, var(--text-primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="light"] .btn-outline {
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .btn-outline:hover {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="light"] .expertise-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .tag {
+  color: var(--accent);
+  background: rgba(37, 99, 235, 0.08);
+  border-color: rgba(37, 99, 235, 0.15);
+}
+
+[data-theme="light"] .company-header {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.06), rgba(37, 99, 235, 0.02));
+  border-color: rgba(37, 99, 235, 0.12);
+}
+
+[data-theme="light"] .company-period {
+  color: var(--accent);
+  border-color: rgba(37, 99, 235, 0.2);
+  background: rgba(37, 99, 235, 0.06);
+}
+
+[data-theme="light"] .hero-badge {
+  color: var(--accent);
+  border-color: rgba(37, 99, 235, 0.25);
+  background: rgba(37, 99, 235, 0.06);
+}
+
+[data-theme="light"] .contact-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .btn-primary:hover {
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.25);
+}
+
 /* ========== Animations ========== */
 .reveal {
   opacity: 0;
@@ -938,7 +1069,7 @@ ul {
     left: 0;
     right: 0;
     flex-direction: column;
-    background: rgba(10, 15, 28, 0.98);
+    background: var(--mobile-nav-bg);
     backdrop-filter: blur(20px);
     padding: 16px 24px;
     gap: 4px;
