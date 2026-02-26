@@ -576,6 +576,75 @@ ul {
   line-height: 1.8;
 }
 
+/* Project Gallery */
+.project-gallery {
+  margin-bottom: 24px;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.gallery-track {
+  display: flex;
+  gap: 2px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+}
+
+.gallery-track::-webkit-scrollbar {
+  height: 4px;
+}
+
+.gallery-track::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.gallery-track::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.gallery-track img {
+  flex: 0 0 auto;
+  height: 200px;
+  width: auto;
+  object-fit: cover;
+  scroll-snap-align: start;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.gallery-track img:hover {
+  opacity: 0.85;
+}
+
+/* Lightbox */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+  animation: fadeIn 0.2s ease;
+}
+
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .project-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -759,9 +828,9 @@ ul {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  max-width: 600px;
+  max-width: 750px;
   margin: 0 auto;
 }
 
@@ -921,6 +990,10 @@ ul {
 
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .gallery-track img {
+    height: 160px;
   }
 }
 

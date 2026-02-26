@@ -59,3 +59,14 @@ window.addEventListener('scroll', () => {
     }
   });
 }, { passive: true });
+
+// Image lightbox
+document.querySelectorAll('.gallery-track img').forEach(img => {
+  img.addEventListener('click', () => {
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
+    overlay.addEventListener('click', () => overlay.remove());
+    document.body.appendChild(overlay);
+  });
+});
