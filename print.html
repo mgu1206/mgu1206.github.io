@@ -83,7 +83,6 @@
     /* Sections */
     .section {
       margin-bottom: 18px;
-      page-break-inside: avoid;
     }
 
     .section-title {
@@ -495,7 +494,7 @@
 <!-- Stats -->
 <div class="stats-row">
   <div class="stat"><strong>9+</strong> <span>Years Experience</span></div>
-  <div class="stat"><strong>5+</strong> <span>Commercial Products</span></div>
+  <div class="stat"><strong>3+</strong> <span>Commercial Products</span></div>
   <div class="stat"><strong>C++20</strong> <span>Modern Standard</span></div>
   <div class="stat"><strong>Full Stack</strong> <span>Desktop Dev</span></div>
 </div>
@@ -606,96 +605,6 @@
 <div class="section">
   <h2 class="section-title">Projects</h2>
 
-  <!-- XCATH -->
-  <div class="company-section">
-    <div class="company-header">
-      <div class="company-top-line">
-        <span class="company-name">XCATH (엑스캐스)</span>
-        <span class="company-period">2025.11 ~ 현재</span>
-        <span class="company-role">&mdash; SW개발팀 / 선임</span>
-      </div>
-      <div class="company-desc">뇌혈관 시술용 가이드와이어 및 원격 중재시술 로봇 개발 기업</div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-title-row">
-        <span class="project-name">사내 RAG 챗봇</span>
-        <span class="project-period">2026.01 ~ 2026.02</span>
-      </div>
-      <p class="project-desc">사내 문서를 Vector DB에 구축한 RAG 기반 챗봇.</p>
-      <div class="project-details">
-        <div class="project-detail-group">
-          <h4>주요 기술</h4>
-          <div class="project-tags">
-            <span class="tag">LLM</span>
-            <span class="tag">RAG</span>
-            <span class="tag">Vector DB</span>
-            <span class="tag">Python</span>
-          </div>
-        </div>
-        <div class="project-detail-group">
-          <h4>핵심 성과</h4>
-          <ul class="project-achievements">
-            <li>사내 문서 Vector DB 구축 및 RAG 챗봇 개발</li>
-            <li>가능한 범위내에서 On-Premise 구축으로 최소한의 외부 API 비용 운영</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-title-row">
-        <span class="project-name">Persona 기반 AI 코드 리뷰 시스템</span>
-        <span class="project-period">2025.11 ~ 2025.12</span>
-      </div>
-      <p class="project-desc">GitLab Webhook을 활용한 자동 AI 리뷰 시스템를 구현. 도메인별 전문가 페르소나로 다각적 코드 리뷰 자동화.</p>
-      <div class="project-details">
-        <div class="project-detail-group">
-          <h4>주요 기술</h4>
-          <div class="project-tags">
-            <span class="tag">GitLab Webhook</span>
-            <span class="tag">LLM</span>
-            <span class="tag">OpenCode</span>
-            <span class="tag">Python</span>
-          </div>
-        </div>
-        <div class="project-detail-group">
-          <h4>핵심 성과</h4>
-          <ul class="project-achievements">
-            <li>MR 자동 AI 리뷰 시스템 구현</li>
-            <li>도메인별 전문가 페르소나로 다각적 코드 리뷰 자동화</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-title-row">
-        <span class="project-name">GitLab 개발 환경 구축</span>
-        <span class="project-period">2025.11 ~ 2026.01</span>
-      </div>
-      <p class="project-desc">Git 브랜치 전략 수립 및 CI/CD 파이프라인 구축.</p>
-      <div class="project-details">
-        <div class="project-detail-group">
-          <h4>주요 기술</h4>
-          <div class="project-tags">
-            <span class="tag">GitLab</span>
-            <span class="tag">CI/CD</span>
-            <span class="tag">MinIO</span>
-            <span class="tag">Yocto</span>
-          </div>
-        </div>
-        <div class="project-detail-group">
-          <h4>핵심 성과</h4>
-          <ul class="project-achievements">
-            <li>Git 브랜치 전략 수립 및 CI/CD 파이프라인 구축</li>
-            <li>MinIO 기반 Yocto 빌드 캐시 서버 구축으로 빌드 시간 단축</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- RAY -->
   <div class="company-section">
     <div class="company-header">
@@ -705,6 +614,66 @@
         <span class="company-role">&mdash; SW개발본부 3D개발팀 / 수석</span>
       </div>
       <div class="company-desc">코스닥 상장 / 치과 의료기기 장비 제조 및 SW 개발</div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title-row">
+        <span class="project-name">RAYDent Studio</span>
+        <span class="project-period">2016.07 ~ 2018.01</span>
+      </div>
+      <p class="project-desc">치과용 3D 프린터 제어 소프트웨어. 3D 오브젝트 로딩, 편집(Orientation, Support, Bar, Measure, Offset) 및 출력 정보 프린터 전달 기능을 수행.</p>
+      <div class="project-images">
+        <img src="images/projects/raydentstudio-1.png" alt="RAYDent Studio 3D 프린트 뷰">
+        <img src="images/projects/raydentstudio-2.jpg" alt="RAYDent Studio 프린터 설정">
+      </div>
+      <div class="project-details">
+        <div class="project-detail-group">
+          <h4>주요 기술</h4>
+          <div class="project-tags">
+            <span class="tag">C++</span>
+            <span class="tag">Qt / QML 5.7</span>
+            <span class="tag">Serial</span>
+            <span class="tag">TCP</span>
+          </div>
+        </div>
+        <div class="project-detail-group">
+          <h4>핵심 성과</h4>
+          <ul class="project-achievements">
+            <li>QML 활용 재사용 가능한 UI 컴포넌트 설계</li>
+            <li>UI와 비즈니스 로직 분리를 통한 시스템 구조 개선</li>
+            <li>장치 명령 요청/응답 Signal/Slot 구조 설계</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title-row">
+        <span class="project-name">RAYDent Converter</span>
+        <span class="project-period">2018.02 ~ 2019.12</span>
+      </div>
+      <p class="project-desc">치과용 DICOM 의료 이미지 데이터를 STL 3D 모델로 변환하는 소프트웨어. 브러시 편집, 클리핑, 오브젝트 관리 기능을 제공.</p>
+      <div class="project-images">
+        <img src="images/projects/converter-1.jpg" alt="RAYDent Converter 3D 모델">
+        <img src="images/projects/converter-2.jpg" alt="RAYDent Converter 브러시 편집">
+      </div>
+      <div class="project-details">
+        <div class="project-detail-group">
+          <h4>주요 기술</h4>
+          <div class="project-tags">
+            <span class="tag">C++14</span>
+            <span class="tag">CEGUI 0.8.7</span>
+            <span class="tag">OpenGL</span>
+            <span class="tag">VS2015</span>
+          </div>
+        </div>
+        <div class="project-detail-group">
+          <h4>핵심 성과</h4>
+          <ul class="project-achievements">
+            <li>오픈소스 CEGUI 기반 SW 전체 UI 개발</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <div class="project-card">
@@ -748,6 +717,29 @@
 
     <div class="project-card">
       <div class="project-title-row">
+        <span class="project-name">C++ Priority Thread Pool</span>
+        <span class="project-period">2022.01 ~ 2022.06</span>
+      </div>
+      <p class="project-desc">C++20 기반 우선순위 스레드 풀 라이브러리. 개발자가 스레드 생성/관리 부담 없이 비동기 프로그래밍을 할 수 있도록 설계했습니다.</p>
+      <div class="project-details">
+        <div class="project-detail-group">
+          <h4>주요 기술</h4>
+          <div class="project-tags">
+            <span class="tag">C++20</span>
+          </div>
+        </div>
+        <div class="project-detail-group">
+          <h4>핵심 성과</h4>
+          <ul class="project-achievements">
+            <li>우선순위 기반 Job 스케줄링 기능으로 성능 최적화</li>
+            <li>자사 소프트웨어에 성공적으로 적용</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title-row">
         <span class="project-name">RAYFace Manager</span>
         <span class="project-period">2022.01 ~ 2025.10</span>
       </div>
@@ -772,25 +764,40 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- XCATH -->
+  <div class="company-section">
+    <div class="company-header">
+      <div class="company-top-line">
+        <span class="company-name">XCATH (엑스캐스)</span>
+        <span class="company-period">2025.11 ~ 현재</span>
+        <span class="company-role">&mdash; SW개발팀 / 선임</span>
+      </div>
+      <div class="company-desc">뇌혈관 시술용 가이드와이어 및 원격 중재시술 로봇 개발 기업</div>
+    </div>
 
     <div class="project-card">
       <div class="project-title-row">
-        <span class="project-name">C++ Priority Thread Pool</span>
-        <span class="project-period">2022.01 ~ 2022.06</span>
+        <span class="project-name">GitLab 개발 환경 구축</span>
+        <span class="project-period">2025.11 ~ 2026.01</span>
       </div>
-      <p class="project-desc">C++20 기반 우선순위 스레드 풀 라이브러리. 개발자가 스레드 생성/관리 부담 없이 비동기 프로그래밍을 할 수 있도록 설계했습니다.</p>
+      <p class="project-desc">Git 브랜치 전략 수립 및 CI/CD 파이프라인 구축.</p>
       <div class="project-details">
         <div class="project-detail-group">
           <h4>주요 기술</h4>
           <div class="project-tags">
-            <span class="tag">C++20</span>
+            <span class="tag">GitLab</span>
+            <span class="tag">CI/CD</span>
+            <span class="tag">MinIO</span>
+            <span class="tag">Yocto</span>
           </div>
         </div>
         <div class="project-detail-group">
           <h4>핵심 성과</h4>
           <ul class="project-achievements">
-            <li>우선순위 기반 Job 스케줄링 기능으로 성능 최적화</li>
-            <li>자사 소프트웨어에 성공적으로 적용</li>
+            <li>Git 브랜치 전략 수립 및 CI/CD 파이프라인 구축</li>
+            <li>MinIO 기반 Yocto 빌드 캐시 서버 구축으로 빌드 시간 단축</li>
           </ul>
         </div>
       </div>
@@ -798,28 +805,25 @@
 
     <div class="project-card">
       <div class="project-title-row">
-        <span class="project-name">RAYDent Converter</span>
-        <span class="project-period">2018.02 ~ 2019.12</span>
+        <span class="project-name">Persona 기반 AI 코드 리뷰 시스템</span>
+        <span class="project-period">2025.11 ~ 2025.12</span>
       </div>
-      <p class="project-desc">치과용 DICOM 의료 이미지 데이터를 STL 3D 모델로 변환하는 소프트웨어. 브러시 편집, 클리핑, 오브젝트 관리 기능을 제공.</p>
-      <div class="project-images">
-        <img src="images/projects/converter-1.jpg" alt="RAYDent Converter 3D 모델">
-        <img src="images/projects/converter-2.jpg" alt="RAYDent Converter 브러시 편집">
-      </div>
+      <p class="project-desc">GitLab Webhook을 활용한 자동 AI 리뷰 시스템를 구현. 도메인별 전문가 페르소나로 다각적 코드 리뷰 자동화.</p>
       <div class="project-details">
         <div class="project-detail-group">
           <h4>주요 기술</h4>
           <div class="project-tags">
-            <span class="tag">C++14</span>
-            <span class="tag">CEGUI 0.8.7</span>
-            <span class="tag">OpenGL</span>
-            <span class="tag">VS2015</span>
+            <span class="tag">GitLab Webhook</span>
+            <span class="tag">LLM</span>
+            <span class="tag">OpenCode</span>
+            <span class="tag">Python</span>
           </div>
         </div>
         <div class="project-detail-group">
           <h4>핵심 성과</h4>
           <ul class="project-achievements">
-            <li>오픈소스 CEGUI 기반 SW 전체 UI 개발</li>
+            <li>MR 자동 AI 리뷰 시스템 구현</li>
+            <li>도메인별 전문가 페르소나로 다각적 코드 리뷰 자동화</li>
           </ul>
         </div>
       </div>
@@ -827,30 +831,25 @@
 
     <div class="project-card">
       <div class="project-title-row">
-        <span class="project-name">RAYDent Studio</span>
-        <span class="project-period">2016.07 ~ 2018.01</span>
+        <span class="project-name">사내 RAG 챗봇</span>
+        <span class="project-period">2026.01 ~ 2026.02</span>
       </div>
-      <p class="project-desc">치과용 3D 프린터 제어 소프트웨어. 3D 오브젝트 로딩, 편집(Orientation, Support, Bar, Measure, Offset) 및 출력 정보 프린터 전달 기능을 수행.</p>
-      <div class="project-images">
-        <img src="images/projects/raydentstudio-1.png" alt="RAYDent Studio 3D 프린트 뷰">
-        <img src="images/projects/raydentstudio-2.jpg" alt="RAYDent Studio 프린터 설정">
-      </div>
+      <p class="project-desc">사내 문서를 Vector DB에 구축한 RAG 기반 챗봇.</p>
       <div class="project-details">
         <div class="project-detail-group">
           <h4>주요 기술</h4>
           <div class="project-tags">
-            <span class="tag">C++</span>
-            <span class="tag">Qt / QML 5.7</span>
-            <span class="tag">Serial</span>
-            <span class="tag">TCP</span>
+            <span class="tag">LLM</span>
+            <span class="tag">RAG</span>
+            <span class="tag">Vector DB</span>
+            <span class="tag">Python</span>
           </div>
         </div>
         <div class="project-detail-group">
           <h4>핵심 성과</h4>
           <ul class="project-achievements">
-            <li>QML 활용 재사용 가능한 UI 컴포넌트 설계</li>
-            <li>UI와 비즈니스 로직 분리를 통한 시스템 구조 개선</li>
-            <li>장치 명령 요청/응답 Signal/Slot 구조 설계</li>
+            <li>사내 문서 Vector DB 구축 및 RAG 챗봇 개발</li>
+            <li>가능한 범위내에서 On-Premise 구축으로 최소한의 외부 API 비용 운영</li>
           </ul>
         </div>
       </div>
