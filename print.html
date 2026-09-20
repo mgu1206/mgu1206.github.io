@@ -732,18 +732,28 @@
 
     <div class="project-card">
       <div class="project-title-row">
-        <span class="project-name">사내 RAG 챗봇</span>
-        <span class="project-period">2026.01 ~ 2026.02</span>
+        <span class="project-name">사내 AI 지식 플랫폼 (RAG 챗봇 &middot; LLM Wiki)</span>
+        <span class="project-period">2026.01 ~ 현재</span>
       </div>
-      <p class="project-desc">사내 문서(PDF, DOCX, PPTX 등)를 자연어로 질의할 수 있는 RAG 기반 챗봇. AI Agent를 활용하여 설계부터 구현까지 빠르게 완성했습니다.</p>
+      <p class="project-desc">사내 문서를 자연어로 질의하는 RAG 검색 시스템과, AI 에이전트가 지식을 제안·누적하는 LLM-driven 위키를 하나의 지식 플랫폼으로 통합 운영. MCP 서버를 공통 인터페이스로 삼아 모든 LLM 클라이언트에서 동일하게 사용할 수 있도록 설계했습니다.</p>
       <div class="project-details">
         <div class="project-detail-group">
-          <h4>핵심 성과</h4>
+          <h4>검색 &middot; 질의 파이프라인</h4>
           <ul class="project-achievements">
+            <li>사내 문서(PDF, DOCX, PPTX 등)를 자연어로 질의하는 RAG 파이프라인 설계</li>
             <li>하이브리드 검색(Dense + Sparse) 파이프라인 설계로 검색 정확도 향상</li>
             <li>질문을 하위 쿼리로 분해하는 구조를 설계하여 검색 커버리지 개선</li>
             <li>변경된 문서만 재처리하는 증분 인덱싱 설계</li>
             <li>On-Premise 구축으로 외부 API 비용 최소화</li>
+          </ul>
+        </div>
+        <div class="project-detail-group">
+          <h4>지식 관리 &middot; 거버넌스</h4>
+          <ul class="project-achievements">
+            <li>Propose → Approve 워크플로우로 AI 에이전트의 지식 변경을 인간이 검토·승인하는 거버넌스 구조 설계</li>
+            <li>wiki-data(순수 Markdown 저장소)와 wiki-mcp(실행 로직) 완전 분리로 유지보수성 극대화</li>
+            <li>전체 지식 라이프사이클을 MCP 도구로 표준화하여 모든 LLM 클라이언트에서 연동 가능</li>
+            <li>Confluence 외부 소스 동기화 및 변경 이력 자동 git 커밋으로 지식 누적 구조 구현</li>
           </ul>
         </div>
       </div>
@@ -762,56 +772,10 @@
 
     <div class="project-card">
       <div class="project-title-row">
-        <span class="project-name">Fintel</span>
-        <span class="project-period">Side Project</span>
-      </div>
-      <p class="project-desc">복잡한 금융 질문을 받아 리서치 계획을 수립하고, 실시간 데이터로 자율 분석을 수행하는 AI 에이전트. AI Agent를 활용하여 개발했습니다.</p>
-      <div class="project-details">
-        <div class="project-detail-group">
-          <h4>핵심 성과</h4>
-          <ul class="project-achievements">
-            <li>"계획 → 실행 → 검증" 반복 루프를 갖춘 자율 에이전트 구조 설계</li>
-            <li>15개 이상의 금융 도구(SEC 공시, 크립토, 포트폴리오 등) 통합</li>
-            <li>마크다운 기반 스킬 시스템으로 분석 워크플로우를 비개발자도 편집 가능하게 설계</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-title-row">
-        <span class="project-name">Codex Proxy</span>
-        <span class="project-period">Side Project</span>
-      </div>
-      <p class="project-desc">ChatGPT OAuth 인증을 자동 처리하여 Codex API를 REST API로 사용할 수 있게 해주는 로컬 프록시 서버. AI Agent를 활용하여 개발했습니다.</p>
-      <div class="project-details">
-        <div class="project-detail-group">
-          <h4>핵심 성과</h4>
-          <ul class="project-achievements">
-            <li>토큰 자동 갱신이 포함된 OAuth 인증 플로우 설계</li>
-            <li>대화 이력 관리 및 컨텍스트 자동 압축 구조 설계</li>
-            <li>단일 바이너리로 배포 가능한 패키징</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-title-row">
         <span class="project-name">WiFi Parking Control System</span>
         <span class="project-period">Side Project</span>
       </div>
       <p class="project-desc">라즈베리 파이 + 적외선 센서를 활용한 주차 관제 시스템. 물체 감지 시 자동 촬영 후 서버로 전송합니다.</p>
-      <div class="project-details">
-        <div class="project-detail-group">
-          <h4>핵심 성과</h4>
-          <ul class="project-achievements">
-            <li>센서 노드 → 서버 간 시리얼 통신 패킷 프로토콜 설계</li>
-            <li>이미지 분할 전송 패킷 구조 설계</li>
-            <li>거리 센서 기반 물체 감지 및 자동 촬영 로직</li>
-          </ul>
-        </div>
-      </div>
     </div>
   </div>
 </div>

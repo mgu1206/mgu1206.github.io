@@ -245,35 +245,24 @@
       <div class="project-card">
         <div class="project-header">
           <div>
-            <h3 class="project-name">사내 RAG 챗봇</h3>
-            <span class="project-period">2026.01 ~ 2026.02</span>
+            <h3 class="project-name">사내 AI 지식 플랫폼 (RAG 챗봇 · LLM Wiki)</h3>
+            <span class="project-period">2026.01 ~ 현재</span>
           </div>
         </div>
-        <p class="project-desc">사내 문서(PDF, DOCX, PPTX 등)를 자연어로 질의할 수 있는 RAG 기반 챗봇. AI Agent를 활용하여 설계부터 구현까지 빠르게 완성했습니다.</p>
+        <p class="project-desc">사내 문서를 자연어로 질의하는 RAG 검색 시스템과, AI 에이전트가 지식을 제안·누적하는 LLM-driven 위키를 하나의 지식 플랫폼으로 통합 운영합니다. MCP(Model Context Protocol) 서버를 공통 인터페이스로 삼아 검색·읽기·제안·승인 기능을 모든 LLM 클라이언트에서 동일하게 사용할 수 있도록 설계했습니다. AI Agent를 활용하여 설계부터 구현까지 빠르게 완성했습니다.</p>
         <div class="project-details">
           <div class="project-detail-group">
-            <h4>핵심 성과</h4>
+            <h4>검색 · 질의 파이프라인</h4>
             <ul class="project-achievements">
+              <li>사내 문서(PDF, DOCX, PPTX 등)를 자연어로 질의하는 RAG 파이프라인 설계</li>
               <li>하이브리드 검색(Dense + Sparse) 파이프라인 설계로 검색 정확도 향상</li>
               <li>질문을 하위 쿼리로 분해하는 구조를 설계하여 검색 커버리지 개선</li>
               <li>변경된 문서만 재처리하는 증분 인덱싱 설계</li>
               <li>On-Premise 구축으로 외부 API 비용 최소화</li>
             </ul>
           </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-header">
-          <div>
-            <h3 class="project-name">LLM Wiki (Model X Wiki)</h3>
-            <span class="project-period">2026.02 ~ 현재</span>
-          </div>
-        </div>
-        <p class="project-desc">AI 에이전트가 지식을 지속적으로 제안·누적할 수 있는 사내 LLM-driven 위키 시스템. MCP(Model Context Protocol) 서버 기반으로 구축되었으며, 데이터(Obsidian Vault)와 실행 로직(FastAPI MCP)을 완전 분리한 아키텍처로 설계했습니다. AI Agent를 활용하여 개발했습니다.</p>
-        <div class="project-details">
           <div class="project-detail-group">
-            <h4>핵심 성과</h4>
+            <h4>지식 관리 · 거버넌스</h4>
             <ul class="project-achievements">
               <li>Propose → Approve 워크플로우로 AI 에이전트의 지식 변경을 인간이 검토·승인하는 거버넌스 구조 설계</li>
               <li>wiki-data(순수 Markdown 저장소)와 wiki-mcp(실행 로직) 완전 분리로 유지보수성 극대화</li>
