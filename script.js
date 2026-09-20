@@ -29,7 +29,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll(
-  '.project-card, .expertise-card, .highlight-item, .stat-item, .timeline-item, .contact-card, .about-text, .tech-stack, .company-header, .cert-section'
+  '.project-card, .expertise-card, .highlight-item, .stat-item, .timeline-item, .contact-card, .about-text, .tech-stack, .company-header, .cert-section, .summary-card'
 ).forEach(el => {
   el.classList.add('reveal');
   revealObserver.observe(el);
