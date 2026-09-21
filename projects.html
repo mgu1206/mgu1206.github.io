@@ -53,6 +53,33 @@
       <a href="#xcath">XCATH</a>
       <a href="#side">Side Projects</a>
     </nav>
+    <div class="page-stack">
+      <div class="tech-rows">
+        <div class="tech-row">
+          <span class="tech-row-label">기술 스택</span>
+          <div class="project-tags">
+            <span class="tag">C++</span>
+            <span class="tag">Qt</span>
+            <span class="tag">Python</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">MCP</span>
+            <span class="tag">RAG</span>
+            <span class="tag">ChromaDB</span>
+            <span class="tag">Docker</span>
+            <span class="tag">GitLab CI/CD</span>
+            </div>
+        </div>
+        <div class="tech-row">
+          <span class="tech-row-label">협업 툴</span>
+          <div class="project-tags">
+            <span class="tag">Git</span>
+            <span class="tag">GitLab</span>
+            <span class="tag">Jira</span>
+            <span class="tag">Confluence</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -249,16 +276,16 @@
             <span class="project-period">2026.01 ~ 현재</span>
           </div>
         </div>
-        <p class="project-desc">사내 문서를 자연어로 질의하는 RAG 검색 시스템과, AI 에이전트가 지식을 제안·누적하는 LLM-driven 위키를 하나의 지식 플랫폼으로 통합 운영합니다. MCP(Model Context Protocol) 서버를 공통 인터페이스로 삼아 검색·읽기·제안·승인 기능을 모든 LLM 클라이언트에서 동일하게 사용할 수 있도록 설계했습니다. AI Agent를 활용하여 설계부터 구현까지 빠르게 완성했습니다.</p>
+        <p class="project-desc">사내 문서를 검색하고 근거 기반 답변을 생성하는 온프레미스 하이브리드 RAG 시스템과, AI 에이전트가 지식을 제안·누적하는 LLM-driven 위키를 하나의 지식 플랫폼으로 통합 운영합니다. 외부 API 없이 Jetson 장비에서 로컬 LLM 추론을 수행하며, MCP(Model Context Protocol) 서버를 공통 인터페이스로 삼아 검색·읽기·제안·승인 기능을 모든 LLM 클라이언트에서 동일하게 사용할 수 있도록 설계했습니다. AI Agent를 활용하여 설계부터 구현까지 빠르게 완성했습니다.</p>
         <div class="project-details">
           <div class="project-detail-group">
             <h4>검색 · 질의 파이프라인</h4>
             <ul class="project-achievements">
-              <li>사내 문서(PDF, DOCX, PPTX 등)를 자연어로 질의하는 RAG 파이프라인 설계</li>
-              <li>하이브리드 검색(Dense + Sparse) 파이프라인 설계로 검색 정확도 향상</li>
-              <li>질문을 하위 쿼리로 분해하는 구조를 설계하여 검색 커버리지 개선</li>
-              <li>변경된 문서만 재처리하는 증분 인덱싱 설계</li>
-              <li>On-Premise 구축으로 외부 API 비용 최소화</li>
+              <li>ChromaDB 벡터 검색과 BM25 키워드 검색을 RRF로 통합한 하이브리드 검색 파이프라인 설계</li>
+              <li>BGE-m3-ko 임베딩 + bge-reranker-v2-m3-ko 리랭킹 2단 구조로 근거 문서 정확도 향상</li>
+              <li>질의 의도별 검색 라우팅과 목차·섹션 기반 회수, 인접 청크 확장으로 검색 커버리지 개선</li>
+              <li>답변 근거 구성과 인용 검사 단계를 파이프라인에 내장하여 환각 억제</li>
+              <li>변경된 문서만 재처리하는 증분 인덱싱과 정기 문서 동기화 설계</li>
             </ul>
           </div>
           <div class="project-detail-group">
@@ -267,7 +294,8 @@
               <li>Propose → Approve 워크플로우로 AI 에이전트의 지식 변경을 인간이 검토·승인하는 거버넌스 구조 설계</li>
               <li>wiki-data(순수 Markdown 저장소)와 wiki-mcp(실행 로직) 완전 분리로 유지보수성 극대화</li>
               <li>검색·읽기·제안·승인·린트 등 전체 지식 라이프사이클을 MCP 도구로 표준화하여 모든 LLM 클라이언트에서 연동 가능</li>
-              <li>Confluence 외부 소스 동기화 및 변경 이력 자동 git 커밋으로 지식 누적(Compounding Knowledge) 구조 구현</li>
+              <li>Confluence·Jira·Arena 등 외부 소스 동기화 및 변경 이력 자동 git 커밋으로 지식 누적(Compounding Knowledge) 구조 구현</li>
+              <li>Jetson AGX Orin(검색·서비스)과 Jetson Thor(생성·GPU 인덱싱)로 역할을 분리한 온프레미스 추론 환경 구성</li>
             </ul>
           </div>
         </div>
